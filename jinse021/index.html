@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>上海宝山区金色晚年敬老院</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/flexslider.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/jquery.flexslider-min.js"></script>
+  <script src="js/msclass.js"></script>
+  <script></script>
+</head>
+<body>
+  <!-- 头部开始-->
+    <div class="container-fluid header">
+      <div class="row logo">
+        <a href=""><img src="./img/logo.png" alt="" class="img-responsive pull-left"></a>
+        <div class="phone-number">
+          <img src="./img/number.png" alt="" class="img-responsive pull-right">
+          <img src="./img/wxcode.png" alt="" class="img-responsive pull-right">
+        </div>
+      </div>
+        <!-- 导航-->
+      <div class="row nav">
+          <ul class="">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="cost.html">服务标准</a></li>
+            <li><a href="show.html">金色风光</a></li>
+            <li><a href="service.html">特色服务</a></li>
+            <li><a href="news.html">新闻速递</a></li>
+          </ul>
+      </div>
+      <script type="text/javascript">
+        (function($){
+            $('.nav ul li','.header').removeClass('active').eq(0).addClass('active');
+        })(jQuery);
+      </script>
+    </div>
+
+    <!-- 幻灯图-->
+
+    <div class="flexslider" id="homeSlider">
+      <ul class="slides">
+        <li><a href=""><img src="./img/banner.png" alt="" class="img-responsive"></a></li>
+        <li><a href=""><img src="./img/banner.png" alt="" class="img-responsive"></a></li>
+        <li><a href=""><img src="./img/banner.png" alt="" class="img-responsive"></a></li>
+        <li><a href=""><img src="./img/banner.png" alt="" class="img-responsive"></a></li>
+      </ul>
+    </div>
+      <script>
+          (function($){
+            $().ready(function(){
+               $("#homeSlider").flexslider({
+                  animation: 'slide',
+                  directionNav: false,
+                  controlNav: true,
+                  touch: true,
+                });
+            });
+          })(jQuery);
+      </script>
+    <!-- 幻灯图end-->
+  <!-- 头部结束 -->
+    <!-- 环境设施 -->
+    <div class="container-fluid photo">
+      <div class="row">
+        <div class="col-xs-12 title">环境设施 :</div>
+        <div class="col-xs-12" style="padding:0;">
+          <ul id="scroll" style="">
+            <li><img src="./img/show/1.jpg" alt=""></li>
+            <li><img src="./img/show/2.jpg" alt=""></li>
+            <li><img src="./img/show/3.jpg" alt=""></li>
+            <li><img src="./img/show/4.jpg" alt=""></li>
+            <li><img src="./img/show/5.jpg" alt=""></li>
+            <li><img src="./img/show/6.jpg" alt=""></li>
+            <li><img src="./img/show/7.jpg" alt=""></li>
+            <li><img src="./img/show/8.jpg" alt=""></li>
+            <li><img src="./img/show/9.jpg" alt=""></li>
+            <li><img src="./img/show/10.jpg" alt=""></li>
+            <li><img src="./img/show/11.jpg" alt=""></li>
+            <li><img src="./img/show/12.jpg" alt=""></li>
+            <li><img src="./img/show/13.jpg" alt=""></li>
+            <li><img src="./img/show/14.jpg" alt=""></li>
+            <li><img src="./img/show/15.jpg" alt=""></li>
+            <li><img src="./img/show/16.jpg" alt=""></li>
+            <li><img src="./img/show/17.jpg" alt=""></li>
+            <li><img src="./img/show/18.jpg" alt=""></li>
+            <li><img src="./img/show/19.jpg" alt=""></li>
+            <li><img src="./img/show/20.jpg" alt=""></li>
+            <li><img src="./img/show/21.jpg" alt=""></li>
+            <li><img src="./img/show/22.jpg" alt=""></li>
+            <li><img src="./img/show/23.jpg" alt=""></li>
+            <li><img src="./img/show/24.jpg" alt=""></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script> 
+      (function($){
+        $().ready(function(){
+
+        	new Marquee("scroll",2,2,1100,180,20,0,1000,-2)	
+          // var s = $('ul','#scroll');
+          // var ulwidth = s.find('li').length*282.5;
+          // s.css('width',ulwidth+'px');//给ul宽度
+          // var arg = 282.5; 
+          // setInterval(function(){
+          //   if(arg<=(ulwidth-1382.5)){
+          //        s.css('left',-arg+'px');
+          //        arg+=282.5;
+          //      }else{
+          //       s.css('left','0');
+          //       arg+=282.5;
+          //      }
+          // },1000);
+
+        });
+      })(jQuery);
+    </script>
+     <!-- 环境设施end -->
+     <!-- 公告 -->
+     <div class="container-fluid gonggao">
+       <div class="row">
+         <div class="col-xs-12 title">公告 :</div>
+         <div class="col-xs-12 item"><a href="">敬老院的收费价格 老年护理院的服务（详阅医护介绍）</a></div>
+         <div class="col-xs-12 item"><a href="">免费接送家属班车 定点车的舒适享受（详阅特色服务）</a></div>
+         <div class="col-xs-12 item"><a href="">免费陪同外出就诊 亲人般的温馨陪护（详阅特色服务）</a></div>
+       </div>
+     </div>
+     <!-- 公告end -->
+     <!-- 新闻 -->
+     <div class="container-fluid news">
+       <div class="row">
+         <div class="col-xs-12 title">新闻 :</div>
+         <div class="col-xs-12 item">
+           <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="320" height="240">
+              <param name="movie" value="Flvplayer.swf?IsAutoPlay=1" />
+              <param name="quality" value="high" />
+              <param name="allowFullScreen" value="true" />
+              <param name="IsAutoPlay" value="1" />
+              <param name="FlashVars" value="vcastr_file=1.flv&LogoText=www.jinse021.com&BufferTime=3&IsAutoPlay=1&IsContinue=1" />
+              <embed src="Flvplayer.swf" allowfullscreen="true" flashvars="vcastr_file=1.flv&LogoText=www.jinse021.com" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="320" height="240"></embed> 
+          </object>
+          </div>
+       </div>
+     </div>
+     <!-- 新闻end -->
+     <!-- 联系我们 -->
+     <div class="container-fluid contact">
+       <div class="row">
+          <div class="col-xs-12 title">联系我们 :</div>
+          <div class="pull-right wrap"> 
+           <div><img src="./img/address.jpg" alt="" class="pull-right"></div>
+           <p>地铁1号线富锦路转宝山21路；</p>
+           <p>地铁3号线江杨北路转宝山23路； </p>
+           <p>地铁7号线罗南新村或美兰湖转宝山23路。新镇车站下车后沿月新南路往南150米左转即到（见指示牌）。具体情况可来电咨询。</p>
+         </div>
+       </div>
+     </div>
+     <!-- 联系我们end -->
+     <!-- 金色介绍 -->
+     <div class="container-fluid jieshao">
+       <div class="row">
+         <div class="col-xs-12 title text-center">金色万年敬老院介绍</div>
+         <div class="col-xs-12 content">
+         <p>上海宝山区金色晚年敬老院隶属于上海市宝山区金色晚年敬老院卫生所，是一家依靠社会力量兴办的敬老院，也是上海市残疾人养护基地。我院坐落在月罗路新镇车站南首（属月浦镇管辖），东临蕴川路（6分钟车程），西接沪太路（8分钟车程），交通便利、探望方便。地铁1、3、7号线下车后，只需转乘一辆公交车，20分钟即可到达。本院2006年初完工，总占地面积19180平方米，建筑面积10700平方米,目前共有养护楼4幢，房间200间,床位503张。院内院外清流环绕，院内植树种花，环境优雅，景色宜人，空气新鲜，日照充足，陶治心境。 </p>
+          <div class="col-xs-12 item">医护</div>
+          <p>我院内设“金色卫生所”，拥有内科、预防保健科、B超、心电图等科室，并配有输液室和配药房，配备四名中级职称的医生（其中一名为精神顾问医生）和8名护士。2008年1月正式通过上海市医保局审核，成为“上海市医疗保险定点单位”之一，2月初正式使用医保，实现了医保连网，可以随时使用医保卡就医，基本上解决了住养人员看病不便的问题，解除了住养人员和家属的后顾之忧。“金色卫生所”24小时候医，医生每天查房2次，并严格遵守小病院内治，大病转院治的原则，为住养人员提供安心、放心的服务。让入住我院的每一位人员都能享受到敬老院的价格，老人护理院的服务。 做网站公司 </p>
+          <div class="col-xs-12 item">硬件</div>
+          <p>本院设有个性化一室一厅,花园二人房,普通三人房,特别护理房等多种房型，供广大住养人员和家属选择。所有的房内都统一配置了冷暖空调、有线电视、电风扇、急呼铃和淋浴设备，公用部位及一级护理房安装了远程监控摄像头。无障碍通道四通八达。院内同时设有棋牌室、阅览室、多功能娱乐活动厅、文化教室、小卖部、理发室等，日常生活和休闲设施应有尽有，配套齐全。 </p>
+          <div class="col-xs-12 item">管理</div>
+          <p>我们以严谨的治院态度、完善的管理体系、规范的操作流程、高素质的工作服务人员来进行日常的管理，确保入住人员享受到高质量的服务。我院设有院长室、医务科、护理科、后勤科、办公室、残疾人康复科等部门，各部分分工细致，职责明确，专人负责，通力合作。2011年11月通过了ISO 9001质量体系认证。连续三年被上海市残疾人联合会评为残疾人养护基地先进单位。目前我院聘有正副院长3名，各科室负责人7名，招募了70余名年纪轻、文化高、有爱心的经培训合格的有健康证和上岗证的护理人员， 并配备康复文体老师，对住养人员分类管理，组织康复锻炼，让他们在身心方面都得到相应的提高。 </p>
+          <div class="col-xs-12 item">活动丰富多彩</div>
+          <p>为了让住养人员拥有丰富多彩的养护生活，2008年我院开设了占地16亩的“金色庄园”，这是我院的重要特色之一。庄园由运动场、种植场和养殖场三块组成。运动场地有标准篮球场及残疾人球架、健身运动器材、乒乓球场和羽毛球场，是老人和残疾人运动的好去处。种植场和养殖场主要是作为残疾人的工疗基地，让有劳动能力的残疾人在这片土地上种植蔬菜瓜果和养殖家畜家禽等，通过劳动让他们得到一定的康复。“金色庄园”也成为老年朋友追忆、休闲的好场所。让每一位入住人员都健康地生活在这舒适、温馨的环境中，享受党的阳光政策的春风，让我们的努力变成他们暧暧的笑容，这是我们最大的心愿，也是我院服务的宗旨。</p>
+         </div>
+       </div>
+     </div>
+     <!-- 金色介绍end -->
+
+    <!-- 底部开始 -->
+    <div class="container-fluid footer">
+      <div class="row f1">
+        <ul>
+        <li><h5><b>关于我们</b></h5><a href="">金色阳光</a><a href="">加入我们</a><a href="">客服电话</a></li>
+        <li><h5><b>友情链接</b></h5><a href="">应用宝</a><a href="">金色阳光</a></li>
+        <li><h5><b>关注我们</b></h5><a href="">微博</a><a href="">微博</a></li>
+        <li><h5><b>微信公众号</b></h5><img src="./img/wxcode.png" class="wxcode"></li>
+        </ul>
+        <div class="text-center f2">版权所有 © 上海宝山区金色晚年敬老院&nbsp;|&nbsp;电话：021-56931631&nbsp;56932524&nbsp;|&nbsp;地址：上海市宝山区月罗路新镇车站南首&nbsp;&nbsp;[<a href="">管理</a>]</div>
+      </div>
+    </div>
+    <!-- 底部结束 -->
+  </body>
+</html>
