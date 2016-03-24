@@ -1,0 +1,27 @@
+
+
+.upload{margin-top: 15px;}
+.upload_img{background-color: #fff9be;}
+.upload_img h4{color: #cc5800;font-size: 1.5em;font-weight: bolder;}
+.upload_img img{margin-bottom: 15px;width: 100%;}
+
+.upload_info{}
+.upload_info .input-group{margin-top:10%; }
+.upload_info .info1 , .upload_info .info2{border: 1px solid #ec6941;background-color: #fdfbf3;padding: 0;color: #cc5800;}
+.upload_info .info1 {border-right: 0px;padding-left: 2px;}
+.upload_info .info2{border-left: 0px;}
+
+.upload_info h5 i{color: #ff4800;font-size: 1.2em;}
+.upload_info h5 small{color: #030303;opacity: 0.8;}
+
+.upload .submit a{margin-top: 15px;background-color: #b28850;border: 1px;}
+.upload .submit a:hover{background-color: #b28850;}
+
+.prize{margin-top: 15px;padding: 15px;}
+.prize h5{padding-left: 15px;padding-right: 15px;color: #9f2804;opacity: 0.8;}
+.prize h5 small{color: #9f2804;opacity: 0.8;}
+.prize small{color: #5c1803;padding-left: 15px;padding-right: 15px;}
+
+.prize_pic .prize_pic_1 , .prize_pic .prize_pic_2 , .prize_pic .prize_pic_3{float:left;margin-left: 4%;width: 28%;}
+.prize_pic .prize_pic_1 img , .prize_pic .prize_pic_2 img , .prize_pic .prize_pic_3 img{box-shadow:1px 1px 1px rgba(0,0,0,.3);}
+

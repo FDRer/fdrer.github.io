@@ -1,0 +1,11 @@
+
+.showpic{border: 2px solid #ec6941;border-radius: 8px;margin-top: 15px;padding-left: 10px;padding-right: 10px;}
+.showpic img{margin-top: 10px;width: 100%;}
+.showpic .text-center{color: #ec6941;font-weight: bolder;opacity: 0.8;}
+
+.showbtn button{margin-top: 15px; height: 35px;line-height: 18px;font-size: 1.3em; width: 40%;background-color: #b28850;color: #ffffff;font-weight: bolder;}
+.showbtn .showbtn1:hover{background-color: #b28850;border-color:#b28850;color: #ffffff; }
+.showbtn .showbtn1:focus{background-color: #b28850;border-color:#b28850;color: #ffffff; }
+.showbtn .showbtn1:active{background-color: #b28850;border-color:#b28850;color: #ffffff; }
+
+.share .modal-footer{border:0;margin-top: 15%;}

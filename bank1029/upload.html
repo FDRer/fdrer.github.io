@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>上传页</title>
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/common.css" rel="stylesheet">
+	<link href="css/upload.css" rel="stylesheet">
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<header>
+		<div class="container-fluid">
+			<div class="row">
+				<img src="img/head.png" class="img-responsive center-block">
+			</div>
+		</div>
+	</header>
+	
+	<div class="container-fluid upload">
+		<div class="row">
+			<div class="col-xs-5 col-xs-offset-1 upload_img">
+				<h4 class="text-center"><b>我的作品</b></h4>
+				<div>
+					<a href=""><img src="img/img_upload_1.png" class="img-responsive center-block"></a>
+				</div>
+			</div>
+			<div class="col-xs-6 upload_info">
+				<div class="input-group">
+					<span class="input-group-addon info1" id="basic-addon1">电话：</span>
+					<input type="text" class="form-control info2" placeholder="" aria-describedby="basic-addon1">
+				</div>
+				
+				<div class="input-group">
+					<span class="input-group-addon info1" id="basic-addon1">作品名称：</span>
+					 <input type="text" class="form-control info2" placeholder="" aria-describedby="basic-addon1">
+				</div>
+				<h5><i>●</i>&nbsp;<small>图片大小在3M以内</small></h5>
+				<h5><i>●</i>&nbsp;<small>作品名称在6个字以内</small></h5>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+		<div class="col-xs-6 col-xs-offset-3 submit">
+			<a href="" class="btn btn-default btn-block center-block" >提交</a>
+		</div>
+
+	</div>
+
+
+	<div class="container-fluid prize">
+		<div class="row">
+			<h5><b>奖项设置</b><small>（&nbsp;按票数颁发&nbsp;）</small></h5>
+			<small>摄影大师（&nbsp;1名&nbsp;）：Specialized Pitch 650B山地车</small><br>
+			<small>摄影玩家（&nbsp;9名&nbsp;）：佳能EOS专业摄影马甲背心	</small><br>
+			<small>入围奖（&nbsp;40名&nbsp;）：趣味情侣钥匙扣	</small>
+		</div>
+	</div>
+	
+	<div class="container-fluid prize_pic">
+		<div class="row">
+			<div class="prize_pic_1">
+				<img src="img/img_bike.png" class="img-responsive">
+				<h6 class="text-center">山地车</h6>
+			</div>
+			<div class="prize_pic_2"><img src="img/img_clothes.png" class="img-responsive"><h6 class="text-center">专业摄影马甲背心</h6></div>
+			<div class="prize_pic_3"><img src="img/img_key.png" class="img-responsive"><h6 class="text-center">趣味情侣钥匙扣</h6></div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+
+
+
+
+	<div class="commonheight"></div>
+	
+	<div class="container-fluid foot-flower">
+		<div class="row">
+			<img src="img/footer_fy.png" class="img-responsive">
+		</div>
+	</div>
+
+	<footer>
+		<div class="container-fluid foot-nav">
+			<div class="row">
+				<div class="col-xs-4 footnav-1">
+					<a href="paiming.html"><img src="img/footcup_purple.png" class="img-responsive center-block switch1"></a>
+					<a href="paiming.html"><img src="img/footcup_black.png" class="img-responsive center-block switch2"></a>
+				</div>		
+				<div class="footnav-2">
+					<!-- Button trigger modal -->
+					<img src="img/footcamera_purple.png" class="center-block switch1" data-toggle="modal" data-target="#myModal">
+					<img src="img/footcamera_black.png" class="center-block switch2" data-toggle="modal" data-target="#myModal">
+				</div>
+				<div class="col-xs-4 col-xs-offset-4 footnav-3  active">
+					<img src="img/footerbell_purple.png" class="img-responsive center-block switch1">
+					<img src="img/footerbell_black.png" class="img-responsive center-block switch2">
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
+		<!-- Button trigger modal 
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+		  Launch demo modal
+		</button>
+		-->
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		     		<div class="container-fluid wxcode">
+		     			<div class="row">
+		     				<h4 class="col-xs-12 text-center"><b>如何参与活动</b></h4>
+		     				<h5 class="col-xs-12 text-center">1、长按二维码关注农行微信</h5>
+		     				<h5 class="col-xs-12"><img src="img/wxcode.png" class="img-responsive center-block"></h5>
+		     				<h5 class="col-xs-12 ">2、进入公众号，点进自动回复中“随手拍”进入活动页面。</h5>
+
+		     			</div>
+		     		</div>
+		  </div>
+		</div>
+	
+	
+
+
+</body>
+</html>
