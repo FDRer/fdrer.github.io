@@ -1,0 +1,32 @@
+ul{margin: 0;padding: 0;}
+li{list-style: none;}
+body{background-color: #eeeeee;}
+.topnav{width: 100%;}
+.topnav li{width: 16.66%;float: left;text-align: center;padding-top:15px;padding-bottom:10px;height: 70px;background-color: #ffffff;}
+.topnav li img{height: 45%;margin-bottom: 5px;}
+.topnav li span{font-size: 0.8em;font-family: "Microsoft Yahei";}
+.topnav li img:nth-child(2){display: none}
+.topnav li.active span{color: #fe457c}
+.topnav li.active img:nth-child(1){display: none;}
+.topnav li.active img:nth-child(2){display: block;}
+
+.content{clear: both; background-color: #ffffff;border-top: 5px solid #eee;border-right: 10px solid #eee;border-left: 10px solid #eee; }
+.content .item{}
+.content .item .dianpu{padding: 0 10px;height: 50px;line-height: 50px;border-bottom: 1px solid #e8e8e8;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.content .item .dianpu img{display: inline-block;height: 55%;margin-right: 5px;}
+.content .item .dianpu span{font-size: 1em;color:#999999;font-family: "Microsoft Yahei";}
+.content .item .fkzt{height: 50px;line-height: 50px;border-bottom: 1px solid #e8e8e8;white-space: nowrap;overflow: hidden;color:#fe457c;font-family: "Microsoft Yahei";}
+.content .item .info{padding:0;padding-top: 10px;}
+.content .item .info .img{padding:0;padding-left: 10px;}
+.content .item .info .shuxing{padding:0;padding-left: 5px;padding-right: 10px;}
+.content .item .info .shuxing h5{padding:0 0 5px 5px;margin: 0;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;color: #555555;font-family: "Microsoft Yahei";font-size: 1.2em;}
+.content .item .info .shuxing .col-xs-6{padding:0;padding-left: 5px;color: #999999;font-size: 0.8em;font-family:"Microsoft Yahei";}
+.content .item .info .shuxing p{margin: 0;}
+.content .item .info .shuxing p span{color:#fe457c;}
+.content .item .info .price{padding:0 10px; height: 50px;line-height: 50px;border-top: 1px solid #e8e8e8;border-bottom: 1px solid #e8e8e8;margin-top: 15px;color: #555555;font-size: 1em;font-family:"Microsoft Yahei";}
+.content .item .info .price span b{color:#fe457c;font-weight: 500;}
+.content .item .info .anniu{padding:0 10px;height: 70px;line-height: 70px;color: #999999;font-family:"Microsoft Yahei";font-size: 0.6em;}
+.content .item .info .anniu a,
+.content .item .info .anniu b{color: #ffffff;border-radius: 30px;height: 30px;margin-top: 20px;border: none;padding: 5px 15px;}
+.content .item .info .anniu a{background-color: #fe457c;}
+.content .item .info .anniu b{background-color: #d5d5d5;margin-left: 5px;}

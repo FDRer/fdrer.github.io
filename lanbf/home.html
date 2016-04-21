@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>兰博妃</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/flexslider.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet"> 
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/iscroll.js"></script>
+</head>
+<body>
+	<div class="homeHeader">
+	<!--  搜索框&logo部分-->
+		<form id="form" action="" method="get">
+			<div class="container-fluid" id="homeTop">
+				<div class="row">
+					<div class="topBgimg"><img src="img/home-top.png" class="img-responsive"></div>
+					<div class="search"><input type="text" id="search_key" name="search_key" class="form-control" placeholder="请输入" value=""></div>
+					<a href="" class="left-url">左侧链接</a>
+					<a href="" class="search-btn">搜索按钮链接</a>
+					<a href="" class="right-url">右侧链接</a>
+				</div>
+			</div>		
+		</form>
+		<!--  top分类部分 -->
+		<div class="container-fluid" id="homeClassify">
+			<div class="row">
+				<div id="wrapper"><div id="scroller">
+					<ul>
+						<li class="active"><a href="">全部筒</a></li>
+						<li><a href="">打底筒</a></li>
+						<li><a href="">中筒筒</a></li>
+						<li><a href="">铅笔筒</a></li>
+						<li><a href="">什么筒</a></li>
+						<li><a href="">优衣筒</a></li>
+						<li><a href="">褲不筒</a></li>
+						<li><a href="">褲不筒</a></li>
+						<li><a href="">褲不筒</a></li>
+						<li><a href="">褲不筒</a></li>
+					</ul>
+				</div></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+				//导航栏滑动，使用iScroll插件
+				(function($){
+					$().ready(function(){
+					var myScroll;
+					function loaded () {
+						var li = $('#scroller').find('li');
+						var w = $(window).width()/4;
+						li.css('width',(w-15)+'px');
+						$('#scroller').css('width',(li.length*w+30)+'px');
+						myScroll = new IScroll('#wrapper', { eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false });
+					}
+					loaded();
+					});
+				})(jQuery);
+		</script>
+	</div>
+	<div style="height:110px;"></div>
+	<!--  幻灯片banner部分 -->
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="flexslider" id="homeSlider">
+				<ul class="slides">
+					<li><img src="img/dddd.jpg" alt="" class="img-responsive"></li>
+					<li><img src="img/banner.png" alt="" class="img-responsive"></li>
+					<li><img src="img/banner.png" alt="" class="img-responsive"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		(function($) {
+			$().ready(function(){
+				$("#homeSlider").flexslider({
+					animation: 'slide',
+					directionNav: false,
+					controlNav: true,
+					touch: true,
+				});
+			});
+		})(jQuery);
+	</script>
+
+	<div class="container-fluid homeItem">
+		<div class="row">
+			<h2 class="col-xs-12">今日上新<small>每日九点上新</small></h2>
+			<div class="item col-xs-12">
+				<div class="item-img"><a href=""><img src="img/goods-1.png" alt="" class="img-responsive"></a></div>
+				<h3 class="col-xs-12">兰博妃精品女装<small>¥ 398</small></h3>
+			</div>	
+
+			<div class="item col-xs-12">
+				<div class="item-img"><a href=""><img src="img/goods-2.png" alt="" class="img-responsive"></a></div>
+				<h3 class="col-xs-12">兰博妃精品女装<small>¥ 398</small></h3>
+			</div>	
+
+			<div class="item col-xs-12">
+				<div class="item-img"><a href=""><img src="img/goods-1.png" alt="" class="img-responsive"></a></div>
+				<h3 class="col-xs-12">兰博妃精品女装<small>¥ 398</small></h3>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row">
+			<ul class="footerNav">
+				<li class="text-center active"><a href="home.html"><img src="img/home-icon.png" alt="" class="img-responsive center-block"><span class="text-center">首页</span></a></li>				
+				<li class="text-center"><a href="detail.html"><img src="img/time-icon.png" alt="" class="img-responsive center-block"><span>限时优惠</span></a></li>				
+				<li class="text-center"><a href="confirm.html"><img src="img/cart-icon.png" alt="" class="img-responsive center-block"><span>购物车</span></a></li>				
+				<li class="text-center"><a href="pay.html"><img src="img/user-icon.png" alt="" class="img-responsive center-block"><span>我</span></a></li>				
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

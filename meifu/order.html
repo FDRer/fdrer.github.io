@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<title>订单确认页面</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/order.css">
+	<script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- 订单商品 -->
+<div class="container-fluid orderitem">
+	<div class="row"><a href="">
+		<div class="col-xs-4"><img src="img/good1.png" alt="" class="img-responsive"></div>
+		<div class="col-xs-8 info">
+			<h5>春季新款时尚魅力连衣裙春季新款时尚魅力连衣裙</h5>
+			<h6>定制价：<span>¥ 1169.00</span></h6>
+			<p>已选：黑色/纯棉</p>
+			<p>数量：1&nbsp;件</p>
+		</div>
+	</a></div>
+</div>
+
+<!-- 服务机构 -->
+<div class="container-fluid checkorder">
+	<div class="row">
+		<h5>选择服务会所/测量身材</h5>
+		<div class="tiaowen"><img src="img/order2_top.png" alt="" class="img-responsive"></div>
+		<!--类choose 和address ：在用户没有默认地址的情况下显示choose -->
+		<div class="col-xs-12 text-center choose" data-toggle="modal" data-target="#myModal"><img src="img/plus.png" alt="" class="img-responsive"><span>请选择您的提货或专业美容服务机构</span></div>
+		<div class="col-xs-12 address">
+			<div class="col-xs-9 p1">
+				<h5 class="col-xs-12"><div class="col-xs-6 name">娇子国际美容机构娇子国际美容机构</div><div class="col-xs-6 num">135135135135</div></h5>
+				<div class="col-xs-2"><img src="img/pic123.png" alt="" class="img-responsive"></div>
+				<span class="col-xs-10 dz">武汉市硚口区金凤路19号光谷软件园</span>
+			</div>
+			<div class="col-xs-3 p2">
+				<a href="#" role="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">更换</a>
+			</div>
+		</div>
+		<div class="tiaowen"><img src="img/order2_top.png" alt="" class="img-responsive"></div>
+	</div>
+</div>
+<!-- 说明 -->
+<div class="container-fluid words">
+<div class="row">
+	<div class="wrap">
+	<div class="col-xs-3 img"><img src="img/lingdang.png" alt="" class="img-responsive"></div>
+	<div class="col-xs-9 content">在预付20%定金期间，可以享受到风尚服饰定制平台为您提供的超五星级服务；并且由专业的形象顾问为您测量最准确的身材数据，传至设计师为您裁剪试制小样，收到小样后，您有任可不满意，均可享受无理由全额退款！请您放购物！</div>
+	</div>
+</div>
+</div>
+
+<!-- 地址修改页面 -->
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      	<div class="col-xs-12 address active"><!-- 循环address -->
+			<div class="col-xs-9 p1">
+				<h5 class="col-xs-12"><div class="col-xs-6 name">娇子国际美容机构娇子国际美容机构</div><div class="col-xs-6 num">13500000000</div></h5>
+				<div class="col-xs-2"><img src="img/pic123.png" alt="" class="img-responsive"></div>
+				<span class="col-xs-10 dz">武汉市硚口区金凤路19号光谷软件园</span>
+			</div>
+			<div class="col-xs-3 p2">
+				<span></span>
+				<div>设为默认地址</div>
+			</div>
+		</div>
+
+      	<div class="col-xs-12 address"><!-- 循环address -->
+			<div class="col-xs-9 p1">
+				<h5 class="col-xs-12"><div class="col-xs-6 name">唯美国际</div><div class="col-xs-6 num">13500000000</div></h5>
+				<div class="col-xs-2"><img src="img/pic123.png" alt="" class="img-responsive"></div>
+				<span class="col-xs-10 dz">南京市硚口区金凤路19号光谷软件园</span>
+			</div>
+			<div class="col-xs-3 p2 check">
+				<span></span>
+				<div>设为默认地址</div>
+			</div>
+		</div>
+      <!-- 底部确认 -->
+      <div style="height: 60px;"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="confirmAddress">确认选择</button>
+      </div>
+    </div><!--modal-content -->
+  </div><!-- modal-dialog -->
+</div><!--modal -->
+
+<script>
+	(function($){
+		$().ready(function(){
+			var address = $('.address','#myModal');
+			var p1 = $('.p1','#myModal');
+			var p2 = $('.p2','#myModal .address');
+			var ca = $('#confirmAddress');
+			p1.on('click',function(){
+				address.removeClass('active');
+				$(this).parent().addClass('active');
+			})
+			//选择是否默认，有点小问题
+			p2.on('click',function(){
+				p2.removeClass('check');
+				$(this).addClass('check');
+			})//
+			//获取选择后的数据，将数据显示
+			ca.on('click',function(){
+				var info = new Array();
+				address.each(function(){
+					if($(this).hasClass('active')){
+						info.push($(this).find('.name').eq(0).text());
+						info.push($(this).find('.num').eq(0).text());
+						info.push($(this).find('.dz').eq(0).text());
+					}
+				})
+				console.log(info);
+				var dz = $('.address','.checkorder');
+				dz.find('.name').eq(0).text(info[0]);
+				dz.find('.num').eq(0).text(info[1]);
+				dz.find('.dz').eq(0).text(info[2]);
+				dz.show();
+				$('.choose','.checkorder').hide();
+			})
+		});
+	})(jQuery);
+
+</script>
+
+<!-- 底部按钮 -->
+<div style="height: 60px;font-size:0">撑开底部</div>
+<div class="order-footer">
+	<div class="text-center">¥ 328.00</div>
+	<a href="" class="text-center">确认预订</a>
+</div>
+
+</body>
+</html>

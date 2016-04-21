@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<title>美服首页</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/hammer.min.js"></script>
+    <script src="js/jquery.hammer.js"></script>
+    <script src="js/iscroll.js"></script>
+</head>
+<body>
+<!-- 头部搜索框 --> 
+	<div class="container-fluid header">
+		<div class="row">
+			<div class="col-xs-2"><a href=""><img src="img/header_feilei.jpg" alt="" class="img-responsive center-block"></a></div>
+			<div class="col-xs-8"><label for=""><input type="text" class="form-control" placeholder="单品/品牌/日韩范"></label></div>
+			<div class="col-xs-2"><a href=""><img src="img/soucang.jpg" alt="" class="img-responsive center-block"></a></div>
+		</div>
+	</div>
+
+<!-- 幻灯片 -->
+<div id="headerImg" class="carousel slide" data-ride="carousel">
+  <!-- Indicators 小圆点 -->
+  <ol class="carousel-indicators"><!--  <li data-target="#headerImg" data-slide-to="0" class="active"></li> data-target和外层ID要一致 --></ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item"><img src="img/blinging.png" alt=""></div><!-- 幻灯图片循环这里 -->    
+    <div class="item"><img src="img/blinging.png" alt=""></div>    
+    <div class="item"><img src="img/blinging.png" alt=""></div>
+    <div class="item"><img src="img/blinging.png" alt=""></div>
+  </div>
+</div>
+<script>
+(function($){
+	$().ready(function(){
+		//根据图片数量显示小圆点
+		 var imglist = $('.item','#headerImg');
+		 imglist.eq(0).addClass('active');
+		 var html = "";
+		 for(var i =0;i<imglist.length;i++){html +='<li data-target="#headerImg" data-slide-to='+ i +'></li>';}
+		$('.carousel-indicators','#headerImg').append(html).find('li').eq(0).addClass('active');
+		//使用hammer插件实现bootstrap幻灯片划屏切换
+		 $('#headerImg').hammer().on('swipeleft', function(){$(this).carousel('next');});
+		 $('#headerImg').hammer().on('swiperight', function(){$(this).carousel('prev');});
+	});
+})(jQuery);
+</script>
+
+<!-- 中部导航 -->
+<div class="container-fluid nav">
+	<div class="row">
+		<ul class="col-xs-12">
+			<li class="col-xs-3"><a href=""><img src="img/mnav1.png" alt="" class="img-responsive center-block"><span class="text-center">美服</span></a></li>
+			<li class="col-xs-3"><a href=""><img src="img/mnav2.png" alt="" class="img-responsive center-block"><span class="text-center">美容</span></a></li>
+			<li class="col-xs-3"><a href=""><img src="img/mnav3.png" alt="" class="img-responsive center-block"><span class="text-center">养生</span></a></li>
+			<li class="col-xs-3"><a href=""><img src="img/mnav4.png" alt="" class="img-responsive center-block"><span class="text-center">特色</span></a></li>
+		</ul>
+	</div>
+</div>
+<!-- 风格导航 欧美风，日韩风，中国风，英伦范 -->
+<script>
+	(function($){
+		$().ready(function(){
+			var $sw = $("#style-nav");
+			var $swul = $(".content","#style-nav");
+			var $swulli = $(".content li","#style-nav");
+			var swulwidth =($swulli.width()+6)*$swulli.length;
+			$swul.width(swulwidth);//给ul宽度赋值
+			//风格分类左右划动
+			var myScroll;
+			function loaded () {
+				$('#scroller').css('width',swulwidth+'px');
+				myScroll = new IScroll('#wrapper', { eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false });
+			}
+			loaded();		
+			//定制分类左右划动
+			var diynavli = $('ul li','#diy-nav')
+			var diynavwidth = (diynavli.width()+6)*diynavli.length
+			$('ul','#diy-nav').css('width',diynavwidth+'px');
+			var diyScroll;
+			function diyloaded () {
+				$('#diyScroller').css('width',diynavwidth+'px');
+				diyScroll = new IScroll('#diyWrapper', { eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false });
+			}
+			diyloaded();
+			//给style商品设置top
+			var titleheight = $('div:first-child','#style-content').height()+10;
+			$('div:nth-child(3)','#style-content').css('top',titleheight+'px');
+			$('div:nth-child(5)','#style-content').css('top',(titleheight+250)+'px');
+
+			//点击风格更新数据
+			var title = $('.title','#style-content');
+			var item = $('.item','#style-content');
+			var morelink = $('.more','#style-content');
+
+			$swulli.hammer().on('tap',function(){
+					$swulli.removeClass('active');
+					$(this).addClass('active');//选中
+
+					var index = parseInt($(this).attr('index'));
+					console.log(index);
+					switch (index){
+						case 1:
+							title.find('img').prop('src','img/meifu22.png');;
+							title.find('span').text('中国风');
+							title.find('p').text('优雅备至//hahaha');
+							item.each(function(){
+								//获取数据循环
+								$(this).find('.img img').prop('src','img/meifu_47.jpg'); //主图
+								$(this).find('h5 img').prop('src','img/er.png')//国旗
+								$(this).find('h5').text('这是一件衣服')//商品标题
+								$(this).find('h6 span').text('李兆丰')//设计师名称
+								$(this).find('h6 small').text('¥ 1664')//商品价格
+								$(this).find('a').prop('href','http://www.unionbt.com')//商品链接
+							})
+			
+							morelink.find('img').prop('src','img/meifu_34.jpg');
+							morelink.find('a').prop('href','http://www.unionbt.com');
+						break;
+						case 2:
+						break;
+						case 3:
+						break;
+						case 4:
+						break;
+						case 5:
+						break;
+					}
+			})
+		});
+	})(jQuery);
+
+</script>
+<div id="style-nav">
+	<div id="wrapper">
+	<div id="scroller">
+	<ul class="content">
+		<li class="" index=1><img src="img/meifu1423.jpg" alt="" class="img-responsive">
+			<div class="style-name">
+				<h5>欧美范</h5>
+				<p>EUROPE</p>
+				<hr>
+				<span><img src="img/ditu.png" alt="" class="img-responsive">您当前位置</span>
+			</div>
+		</li>
+		<li class="active" index=2><img src="img/meifu1423.jpg" alt="" class="img-responsive">	
+			<div class="style-name">
+				<h5>欧美范</h5>
+				<p>EUROPE</p>
+				<hr>
+				<span><img src="img/ditu.png" alt="" class="img-responsive">您当前位置</span>
+
+			</div>
+		</li>
+		<li index=3><img src="img/meifu1423.jpg" alt="" class="img-responsive">
+			<div class="style-name">
+				<h5>欧美范</h5>
+				<p>EUROPE</p>
+				<hr>
+				<span><img src="img/ditu.png" alt="" class="img-responsive">您当前位置</span>
+
+			</div>
+		</li>
+		<li index=4><img src="img/meifu1423.jpg" alt="" class="img-responsive">
+			<div class="style-name">
+				<h5>欧美范</h5>
+				<p>EUROPE</p>
+				<hr>
+				<span><img src="img/ditu.png" alt="" class="img-responsive">您当前位置</span>
+
+			</div>
+		</li>
+		<li index=5><img src="img/meifu1423.jpg" alt="" class="img-responsive">
+			<div class="style-name">
+				<h5>欧美范</h5>
+				<p>EUROPE</p>
+				<hr>
+				<span><img src="img/ditu.png" alt="" class="img-responsive">您当前位置</span>
+			</div>
+		</li>
+	</ul>
+	</div></div>
+</div>
+
+<!-- 风格导航详情 -->
+<div id="style-content">
+	<div class="title"><img src="img/meifu22.png" alt="">
+		<div class="content">
+			<span>日韩范</span>
+			<p>设计精选/温暖如春</p>
+		</div>
+	</div>
+	<div class="item"><!-- 循环item 只输出4个 开始 -->
+		<a href="">
+		<div class="img"><img src="img/meifu_24.jpg" alt="" class="img-responsive"></div>
+		<h5><img src="img/vn.png" alt="">春季新款时尚魅力连衣裙连衣裙连衣裙</h5>
+		<h6><span>Bibo</span><small>¥ 1169</small></h6>
+		</a>
+	</div>	
+	<div class="item">
+		<a href="">
+		<div class="img"><img src="img/meifu_28.jpg" alt="" class="img-responsive"></div>
+		<h5><img src="img/vn.png" alt="">春季新款时尚魅力连衣裙连衣裙连衣裙</h5>
+		<h6><span>Bibo</span><small>¥ 1170</small></h6>
+		</a>
+	</div>		
+	<div class="item">
+		<a href="">
+		<div class="img"><img src="img/meifu_47.jpg" alt="" class="img-responsive"></div>
+		<h5><img src="img/vn.png" alt="">春季新款时尚魅力连衣裙连衣裙连衣裙</h5>
+		<h6><span>Bibo</span><small>¥ 1171</small></h6>
+		</a>
+	</div>			
+	<div class="item">
+		<a href="">
+		<div class="img"><img src="img/meifu_51.jpg" alt="" class="img-responsive"></div>
+		<h5><img src="img/vn.png" alt="">春季新款时尚魅力连衣裙连衣裙连衣裙</h5>
+		<h6><span>Bibo</span><small>¥ 1172</small></h6>
+		</a>
+	</div>
+	<!-- 循环结束 -->
+	<div class="more">
+		<a href=""><img src="img/meifu_34.jpg" alt="" class="img-responsive"></a>
+	</div>
+</div>
+
+<div class="container-fluid" id="diy-content">
+	<div class="row"><div class="title col-xs-12"><img src="img/diytitle.png" alt="" class="img-responsive"></div></div>
+	<div class="row">
+		<div id="diy-nav">
+			<div id="diyWrapper"><div id="diyScroller">
+				<ul class="content">
+					<li index=1><img src="img/meifu5615.png" alt="" class="img-responsive">
+						<span>婚纱定制</span>
+					</li>
+					<li index=2><img src="img/meifu5615.png" alt="" class="img-responsive">
+						<span>时尚女装</span>
+					</li>
+					<li index=3><img src="img/meifu5615.png" alt="" class="img-responsive">
+						<span>团体衬衫</span>
+					</li>
+					<li index=4><img src="img/meifu5615.png" alt="" class="img-responsive">
+						<span>欧美范</span>
+					</li>
+					<li index=5><img src="img/meifu5615.png" alt="" class="img-responsive">
+						<span>欧美范</span>
+					</li>
+					<li index=6><img src="img/meifu5615.png" alt="" class="img-responsive">
+						<span>欧美范</span>
+					</li>
+				</ul>
+			</div></div>
+		</div>
+
+		<div class="detail">
+			<div class="item"><a href=""> <!-- 循环item 只输出4个 开始 -->
+				<div class="img"><img src="img/meifu_37.jpg" alt=""><span><img src="img/leftsanjiao.png" alt=""></span></div>
+				<div class="name">
+					<h5><span>婚纱名</span></h5>
+					<small>婚纱定制,知名摄影师为你量身定制</small>
+					<h6><span>设计师</span>：Wish</h6>
+				</div>
+				</a>
+			</div>
+			<div class="item"><a href="">
+				<div class="img"><img src="img/meifu_37.jpg" alt=""><span><img src="img/rightsanjiao.png" alt=""></span></div>
+				<div class="name">
+					<h5><span>婚纱名</span></h5>
+					<small>婚纱定制,知名摄影师为你量身定制</small>
+					<h6><span>设计师</span>：Wish</h6>
+				</div>
+				</a>
+			</div>
+			<div class="item"><a href="">
+				<div class="img"><img src="img/meifu_45.jpg" alt=""><span><img src="img/leftsanjiao.png" alt=""></span></div>
+				<div class="name">
+					<h5><span>婚纱名</span></h5>
+					<small>婚纱定制,知名摄影师为你量身定制</small>
+					<h6><span>设计师</span>：Wish</h6>
+				</div>
+				</a>
+			</div>
+			<div class="item"><a href="">
+				<div class="img"><img src="img/meifu_37.jpg" alt=""><span><img src="img/rightsanjiao.png" alt=""></span></div>
+				<div class="name">
+					<h5><span>婚纱名</span></h5>
+					<small>知名摄影师为你量身定制</small>
+					<h6><span>设计师</span>：Wish</h6>
+				</div>
+				</a>
+			</div> <!-- 循环item 只输出4个 结束-->
+
+			<div class="more"><a href=""><img src="img/meifu_more.jpg" alt=""></a></div>
+		</div>
+	</div>	
+</div>
+<!-- 猜你喜欢 -->
+<div class="container-fluid" id="goods">
+	<div class="row">
+		<div class="col-xs-12 title"><img src="img/guesstitle.png" alt="" class="img-responsive"></div>
+
+		<div class="item col-xs-6">
+			<a href="">
+				<div class="img"><img src="img/meifu_51.jpg" alt="" class="img-responsive"></div>
+				<h5><img src="img/vn.png" alt="">春季新款时尚魅力连衣裙连衣裙连衣裙</h5>
+				<h6><span>Bibo</span><small>¥ 1172</small></h6>
+			</a>
+		</div>
+		<div class="item col-xs-6">
+			<a href="">
+				<div class="img"><img src="img/meifu_51.jpg" alt="" class="img-responsive"></div>
+				<h5><img src="img/vn.png" alt="">春季新款时尚魅力连衣裙连衣裙连衣裙</h5>
+				<h6><span>Bibo</span><small>¥ 1172</small></h6>
+			</a>
+		</div>
+		<div class="item col-xs-6">
+			<a href="">
+				<div class="img"><img src="img/meifu_51.jpg" alt="" class="img-responsive"></div>
+				<h5><img src="img/vn.png" alt="">春季新款时尚魅力连衣裙连衣裙连衣裙</h5>
+				<h6><span>Bibo</span><small>¥ 1172</small></h6>
+			</a>
+		</div>
+		<div class="item col-xs-6">
+			<a href="">
+				<div class="img"><img src="img/meifu_51.jpg" alt="" class="img-responsive"></div>
+				<h5><img src="img/vn.png" alt="">春季新款时尚魅力连衣裙连衣裙连衣裙</h5>
+				<h6><span>Bibo</span><small>¥ 1172</small></h6>
+			</a>
+		</div>
+		<div class="item col-xs-6">
+			<a href="">
+				<div class="img"><img src="img/meifu_51.jpg" alt="" class="img-responsive"></div>
+				<h5><img src="img/vn.png" alt="">春季新款时尚魅力连衣裙连衣裙连衣裙</h5>
+				<h6><span>Bibo</span><small>¥ 1172</small></h6>
+			</a>
+		</div>
+	</div>
+</div>
+
+<!-- 底部导航 -->
+<div style="height: 60px;font-size:0">撑开底部</div>
+<div class="footer">
+	<ul>
+		<li><a href=""><div class="first"></div><h5>首页</h5></a></li>
+		<li><a href=""><div class="second"></div><h5>购物车</h5></a></li>
+		<li><a href=""><div class="third"></div><h5>个人</h5></a></li>
+		<li><a href=""><div class="fourth"></div><h5>特色</h5></a></li>
+	</ul>
+</div>
+<script>
+(function($){
+	$('li','.footer').removeClass('active').eq(0).addClass('active');
+})(jQuery);
+</script>
+</body>
+</html>

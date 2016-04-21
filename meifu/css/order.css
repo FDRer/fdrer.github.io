@@ -1,0 +1,67 @@
+li{list-style: none;}
+ul{margin: 0;padding: 0;}
+html{font-size: 10px;}
+.orderitem{margin: 20px 0;}
+.orderitem .col-xs-4{padding: 0;padding-left: 10px;}
+.orderitem .info{padding:0 10px;}
+.orderitem .info h5{margin: 0;color: #555555;font-family: "Microsoft YaHei";font-size:1.8rem;white-space: nowrap;overflow: hidden;text-overflow: ellipsis; }
+.orderitem .info h6{color: #777777;font-family: "Microsoft YaHei";font-size:1.4rem;white-space: nowrap;overflow: hidden;text-overflow: ellipsis; }
+.orderitem .info h6 span{color: #fe457c;}
+.orderitem .info p{color: #777777;font-size: 1.4rem;font-family: "Microsoft YaHei";margin: 0;}
+
+.checkorder{}
+.checkorder h5:first-child{width: 100%;padding: 20px 10px;margin: 0;font-size: 1.8rem;font-family: "Microsoft YaHei";color: #555555;border-top: 1px solid #e8e8e8;}
+.checkorder .tiaowen{width: 100%;padding: 0 10px;}
+
+.checkorder .address{display: none;padding: 0 10px;}
+.checkorder .address .p1{padding:0;margin: 15px 0;border-right:2px solid #e8e8e8 }
+.checkorder .address .p1 h5{padding: 0;padding-bottom:5px;color: #fe457c;font-family: "Microsoft YaHei";font-size: 1.5rem;font-weight: 700; border:none;}
+.checkorder .address .p1 h5 .col-xs-6{padding: 0;}
+.checkorder .address .p1 h5 .col-xs-6:first-child{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.checkorder .address .p1 .col-xs-2{padding: 0;padding-top: 5px;}
+.checkorder .address .p1 .col-xs-10{padding: 0 10px;color: #777777;font-family: "Microsoft YaHei";font-size: 1.5rem;}
+.checkorder .address .p2{padding:25px 0;}
+.checkorder .address .p2 a{height: 35px;width: 60px;line-height: 35px;font-size: 1.4rem;font-family: "Microsoft YaHei"; color:#ffffff;float: right; padding: 0;margin: 0;background-color:#fe457c;border:none;border-radius:0; }
+.checkorder .address .p2 a:focus{outline:0;}
+
+.checkorder .choose{display: block; color: #fe457c;font-size: 1.8rem;line-height: 1.8rem; padding: 20px 0;font-family: "Microsoft YaHei";}
+.checkorder .choose img{display: inline-block;height: 1.3rem;line-height: 1.8rem;}
+.checkorder .choose span{display: inline-block;height: 1.8rem;line-height: 1.8rem;}
+
+.words{margin-top: 30px;}
+.words .wrap{border:1px solid #e8e8e8;height: 16rem;margin: 0 10px;}
+.words .img{padding:10px;height: 16rem;padding-top: 3rem;border-right:1px solid #e8e8e8;}
+.words .content{padding: 10px;font-family: "Microsoft YaHei";font-size: 1.4rem;color: #777777;bor}
+
+#myModal .modal-dialog {width: 100%;height: 100%;border: none;margin: 0;}
+#myModal .modal-dialog .modal-content{width: 100%;height: 100%;border: none;border-radius:0;}
+
+
+#myModal .modal-dialog .modal-content .modal-footer{position: fixed;left: 0;bottom: 0;right: 0;height: 60px;padding: 0;border:none;}
+#myModal .modal-dialog .modal-content .modal-footer button{width: 100%;height: 60px;line-height: 60px;background-color: #fe457c;margin: 0;padding: 0;border-radius:0;border:none;}
+#myModal .modal-dialog .modal-content .modal-footer button{color: #ffffff;font-size: 1.8rem;font-family: "Microsoft Yahei"}
+#myModal .modal-dialog .modal-content .modal-footer button:focus{outline: none;}
+
+#myModal .modal-dialog .modal-content .address{padding: 0 10px;border-bottom: 1px solid #e8e8e8;}
+#myModal .modal-dialog .modal-content .address .p1{padding:0;margin: 15px 0;border-right:2px solid #e8e8e8;padding-left: 30px;}
+
+#myModal .modal-dialog .modal-content .address .p1 h5{padding: 0;margin:0; padding-bottom:5px;color: #fe457c;font-family: "Microsoft YaHei";font-size: 1.4rem;border:none;}
+#myModal .modal-dialog .modal-content .address .p1 h5 .col-xs-6{padding: 0;}
+#myModal .modal-dialog .modal-content .address .p1 h5 .col-xs-6:first-child{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+#myModal .modal-dialog .modal-content .address .p1 .col-xs-2{padding: 0;padding-top: 5px;}
+#myModal .modal-dialog .modal-content .address .p1 .col-xs-10{padding: 0 5px;color: #777777;font-family: "Microsoft YaHei";font-size: 1.2rem;}
+#myModal .modal-dialog .modal-content .address .p2{padding: 0;display: none;}
+#myModal .modal-dialog .modal-content .address .p2 span{position: relative;margin: 0 auto;margin-top: 25px; display: block;width: 54px;height: 28px;background-color: #e8e8e8;border-radius: 28px;}
+#myModal .modal-dialog .modal-content .address .p2 div{color:#777777;font-size: 1.2rem;font-family: "Microsoft YaHei";text-align: center;width: 100%;margin-top: 10px;}
+#myModal .modal-dialog .modal-content .address .p2 span:after{position: absolute;left: 2px;top: 2px;bottom: 2px;content: "";width: 24px;border-radius: 50%;background-color: #ffffff;}
+
+#myModal .modal-dialog .modal-content .active .p1{background:url(../img/gou.png) no-repeat left;background-size: 18px 13px;}
+#myModal .modal-dialog .modal-content .active .p2{display: block;}
+#myModal .modal-dialog .modal-content .address .check span{background-color: #fe457c;}
+#myModal .modal-dialog .modal-content .address .check span:after{left: 26px;}
+
+
+.order-footer{position: fixed;left: 0;right: 0;bottom:0;height: 60px;line-height: 60px;border-top: 1px solid #f4f3f3}
+.order-footer div{width: 50%;float: left;color:#fe457c;font-family:"Microsoft Yahei";font-size: 1.8rem;}
+.order-footer a{width: 50%;display: inline-block;background-color: #fe457c;color: #ffffff;font-family:"Microsoft Yahei";font-size: 1.8rem;}
+.order-footer a:focus{text-decoration: none;}

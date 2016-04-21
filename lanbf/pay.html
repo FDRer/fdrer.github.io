@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>支付-兰博妃</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/pay.css" rel="stylesheet"> 
+
+</head>
+<body>
+	<!-- top 返回按钮 -->
+	<div class="payTop text-center">
+		<a href=""><img src="img/order-back.png" alt="" class="img-responsive"></a>
+		<span>结算</span>
+	</div>
+	<!-- 收货地址 -->
+	<div class="container-fluid payNum">
+		<div class="row">
+			<h3 class="col-xs-12 text-center" id="payshow">应付金额&nbsp;¥&nbsp;596.00
+				<small style="display:none;" id="p1">展开<img src="img/pay-down.png" alt="" class="img-responsive"> </small>
+				<small id="p2">收起<img src="img/pay-up.png" alt="" class="img-responsive"> </small>
+			</h3>
+			<div id="box">
+			<h4 class="col-xs-12">商品金额<small>¥586</small></h4>
+			<h4 class="col-xs-12">运费<small>¥10</small></h4>
+			<h4 class="col-xs-12 change"><label><input type="checkbox" class="form-control">可用积分抵扣<small>¥10</small></label></h4>
+			<h4 class="col-xs-12 change"><label><input type="checkbox" class="form-control">可用红包付款<small>¥10</small></label></h4>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	(function($) {
+			$().ready(function(){
+				$('#payshow').on('click',function(){
+					if($('#p1').is(':hidden')){
+						$('#p1').show();$('#p2').hide();$('#box').hide();
+					}else{
+						$('#p1').hide();$('#p2').show();$('#box').show();
+					}
+				});
+			});
+		})(jQuery);
+	</script>
+	<!-- 选择支付方式 -->
+	<div class="container-fluid">
+		<div class="row">
+			<h3 class="col-xs-12 payChoose">请选择支付方式</h3>
+		</div>
+
+		<div class="row setpay">
+			<label for="pay1" class="col-xs-12">
+				<div class="radio col-xs-2 text-center">
+					<input type="radio" name="chosepay" id="pay1"  class="form-control" value="" disabled="disabled" aria-label="">
+				</div>
+				<div class="col-xs-2 text-left">
+					<img src="img/zf_03.png" class="img-responsive center-block">
+				</div>
+				<div class="col-xs-8">
+					<h6 class="col-xs-12">支付宝</h6>
+					<small class="col-xs-12">快捷安全，可支持银行卡支付</small>
+				</div>
+			</label>
+		</div>
+
+		<div class="row setpay">
+			<label for="pay2" class="col-xs-12">
+				<div class="radio col-xs-2 text-center">
+					<input type="radio" name="chosepay" id="pay2" class="form-control" value="" checked="checked" aria-label="">
+				</div>
+				<div class="col-xs-2 center-block">
+					<img src="img/wx_06.png" class="img-responsive center-block">
+				</div>
+				<div class="col-xs-8">
+					<h6 class="col-xs-12">微信支付</h6>
+					<small class="col-xs-12">推荐已在微信中绑定银行卡用户</small>
+				</div>
+			</label>
+		</div>		
+
+		<div class="row setpay">
+			<label for="pay3" class="col-xs-12">
+				<div class="radio col-xs-2 text-center">
+					<input type="radio" name="chosepay" id="pay3" class="form-control" value="" disabled="disabled" aria-label="">
+				</div>
+				<div class="col-xs-2 center-block">
+					<img src="img/ye_07.png" class="img-responsive center-block">
+				</div>
+				<div class="col-xs-8">
+					<h6 class="col-xs-12">余额支付</h6>
+					<small class="col-xs-12">使用个人账户中的余额支付</small>
+				</div>
+			</label>
+		</div>
+	</div>
+	<!-- 底部 -->
+<div style="height:90px;"></div>
+<div class="payFooter"><a href=""><img src="img/pay-confirm.png" alt="" class="img-responsive"></a></div>
+	
+
+</body>
+</html>

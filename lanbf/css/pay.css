@@ -1,0 +1,29 @@
+.payTop{width:100%;height:40px;line-height: 40px; background-color: #ffffff;font-size: 1.6em;color: #231815;padding:0 15px;border-bottom: 1px solid #cac7c6;}
+.payTop img{display: inline-block;height:20px;float: left;margin-top: 10px;}
+.payTop span{}
+
+.payNum{margin-top: 10px;background-color: #ffffff;}
+.payNum h3{font-size: 1.3em;height: 40px;line-height: 40px;color: #231815;}
+.payNum h3 small{float: right;height: 40px;line-height: 40px;color: #231815;}
+.payNum h3 small img{display: inline-block;width: 14px;margin-left: 3px;}
+.payNum h4{font-size: 1em;height: 30px;line-height: 30px;color: #231815;margin: 0;}
+.payNum h4 small{float: right;font-size: 1em;height: 30px;line-height: 30px;color: #231815;}
+.payNum h4 label{width: 100%;margin:0;color: #a9a7a6;font-size: 1em;font-weight: 500;height: 40px;border-top: 1px solid #e8e8e8;}
+.payNum h4 label small{color: #a9a7a6;}
+.payNum h4 label input{width: 16px;height: 16px; float: left;margin-top: 12px;margin-right: 5px;}
+.payNum h4.change{height: 40px;line-height: 40px;}
+.payNum h4:nth-child(3){margin-top: 5px;}
+
+.payChoose{font-size: 1.3em;color: #231815;}
+.setpay{background-color:#ffffff;height: 60px;margin-bottom: 5px;}
+.setpay label{display: inline-block;padding: 0;margin: 0;height: 60px;}
+.setpay label div{margin: 0;padding: 0}
+.setpay .radio{}
+.setpay .radio input{margin:22.5px 0 0 20px;padding:0;height: 15px;width: 15px;}
+.setpay h6{margin:0;font-size: 0.8em;font-weight: 500;padding: 0;font-weight: 700;margin-top: 10px;height: 20px;line-height: 20px;}
+.setpay small{margin:0;padding:0;font-size: 0.8em;font-weight: 500;height: 20px;line-height: 20px;}
+.setpay img{width:30px;height:30px;margin-top: 15px;display: inline-block;}
+.setpay .col-xs-8{margin-left:-15px;}
+
+.payFooter{width: 100%;position: fixed;bottom: 0;left: 0;right: 0;}
+.payFooter img{width: 100%;}
